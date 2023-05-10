@@ -17,41 +17,35 @@ public class factory {
         
         Session ses=sf.openSession();
         Transaction tx=ses.beginTransaction();
+    
+        location loc1=new location();
+        loc1.setLocationId(103);
+        loc1.setLocationName("Hyd");
+        loc1.setLocationState("TS");
         
-//        location l1=new location();
-//        
-//        l1.setLocationId(101);
-//        l1.setLocationName("Pune");
-//        l1.setLocationState("Maharastra");
-//        
-//        location l2=new location();
-//        l2.setLocationId(102);
-//        l2.setLocationName("Mumbai");
-//        l2.setLocationState("Maharastra");
-//	
-//        
-//        worker w1=new worker();
-//        w1.setWorkerId(1);
-//        w1.setWorkerName("Rupali");
-//        w1.setWorkerField("Mobilizer");
-//        w1.setLoc(l1);
-//	
-//        worker w2=new worker();
-//        w2.setWorkerId(2);
-//        w2.setWorkerName("sarath");
-//        w2.setWorkerField("counsellor");
-//        w2.setLoc(l1);
-//        
-//        worker w3=new worker();
-//        w3.setWorkerName("Alex");
-//        w3.setWorkerField("Accounts");
-//        w3.setLoc(l2);
-//        
-//        ses.save(l1);
-//        ses.save(l2);
-//        ses.save(w1);
-//        ses.save(w2);
-//        ses.save(w3);
+        location loc2=new location();
+        loc2.setLocationId(104);
+        loc2.setLocationName("Vizag");
+        loc2.setLocationState("AP");
+        
+        
+        worker w1=new worker();
+        w1.setWorkerId(4);
+        w1.setWorkerName("john");
+        w1.setWorkerField("Networking");
+        w1.setLoc(loc2);
+        
+        worker w2=new worker();
+        w2.setWorkerId(5);
+        w2.setWorkerName("Alexa");
+        w2.setWorkerField("Data analysis");
+        w2.setLoc(loc2);
+        
+        ses.save(loc2);
+        ses.save(loc1);
+        ses.save(w1);
+               ses.save(w2);
+               tx.commit();
         
         Query qu=ses.createQuery("from worker");
         
@@ -64,9 +58,7 @@ public class factory {
         
         
         
-        
-        
-        tx.commit();
+     
         
         
         

@@ -4,8 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.ManyToAny;
+
 @Entity
 public class worker {
+
 
 	@Id
 	private int workerId;
@@ -42,5 +45,6 @@ public class worker {
 		return "worker [workerId=" + workerId + ", workerName=" + workerName + ", workerField=" + workerField + ", loc="
 				+ loc + "]";
 	}
+	
 	
 }

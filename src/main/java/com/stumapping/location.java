@@ -10,7 +10,6 @@ public class location {
 	private int locationId;
 	private String locationName;
 	private String locationState;
-	
 	public int getLocationId() {
 		return locationId;
 	}
@@ -34,7 +33,6 @@ public class location {
 		return "location [locationId=" + locationId + ", locationName=" + locationName + ", locationState="
 				+ locationState + "]";
 	}
-	
 	
 	
 	
